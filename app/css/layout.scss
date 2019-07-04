@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@mixin flex($direction: column, $inline: block) {
+	display: if($inline==block, flex, inline-flex);
+	// 如果$inline==block，display:flex; 否则 display:inline-flex
+    flex-direction: $direction;
+    // flex-direction: row; 横向列表
+	flex-wrap: wrap;
+}
